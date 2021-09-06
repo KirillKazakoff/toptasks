@@ -1,0 +1,16 @@
+.menu {
+    display: block;
+    max-width: 60%;
+    margin-left: 7px;
+}
+
+.menu:nth-child(n+3) {
+    margin-top: 40px;
+}
+
+.menu-list {
+    margin-top: 15px;
+}
+
+
+

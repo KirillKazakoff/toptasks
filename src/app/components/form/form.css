@@ -1,0 +1,13 @@
+.form-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: solid 3px;
+}
+
+.form-tasks {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+

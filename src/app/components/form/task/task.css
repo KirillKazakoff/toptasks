@@ -1,0 +1,30 @@
+.task-container {
+    width: 90%;
+    display: flex;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    border: solid wheat 2px;
+    border-radius: 100px;
+}
+
+.task-container:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+.task {
+    width: 90%;
+}
+
+.task-hidden {
+    display: none;
+}
+
+.task-button {
+    /* border: solid 2px; */
+    border-radius: 50px;
+    height: 30px;
+    width: 7%;
+    margin-left: 5px;
+}

@@ -1,0 +1,10 @@
+.error {
+    padding-left: 10px;
+    color: thistle;
+}
+
+.no-error {
+    padding-left: 10px;
+    color: teal;
+}
+
