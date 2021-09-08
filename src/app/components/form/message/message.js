@@ -19,7 +19,7 @@ export default class MessageBlock {
         const html = engine(errorT);
         this.formContainer.insertAdjacentHTML('afterbegin', html);
         this.error = this.formContainer.querySelector('.submit-error');
-        this.removeMessage(this.error);
+        MessageBlock.removeMessage(this.error);
     }
 
     showNoFoundMes() {
@@ -34,10 +34,8 @@ export default class MessageBlock {
                 this.noPinMes.remove();
                 this.noPinMes = null;
             }
-        } else {
-            if (!this.noPinMes) {
-                this.showNoPinnedMes();
-            }
+        } else if (!this.noPinMes) {
+            this.showNoPinnedMes();
         }
     }
 
@@ -47,14 +45,12 @@ export default class MessageBlock {
                 this.noFoundMes.remove();
                 this.noFoundMes = null;
             }
-        } else {
-            if (!this.noFoundMes) {
-                this.showNoFoundMes();
-            }
+        } else if (!this.noFoundMes) {
+            this.showNoFoundMes();
         }
     }
 
-    removeMessage(node) {
+    static removeMessage(node) {
         setTimeout(() => node.remove(), 3000);
     }
 }

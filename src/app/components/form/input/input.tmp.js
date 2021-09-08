@@ -4,10 +4,9 @@ const inputT = () => ({
     content: {
         block: 'input',
         attrs: {
-            'type': 'text',
-        }
-    }
+            type: 'text',
+        },
+    },
 });
 
 export default inputT;
-

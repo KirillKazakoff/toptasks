@@ -1,31 +1,29 @@
 const taskPinnedButton = {
     block: 'button',
-    cls: `task-button`,
+    cls: 'task-button',
     content: {
         block: 'div',
-        cls: `span-button`,
+        cls: 'span-button',
         content: 'V',
     },
     attrs: {
-        'type': 'button',
-    }
+        type: 'button',
+    },
 };
 
 const taskAllButton = {
     block: 'button',
-    cls: `task-button`,
+    cls: 'task-button',
     attrs: {
-        'type': 'button',
+        type: 'button',
     },
-}
-
-
+};
 
 const taskT = (title) => ({
     block: 'div',
-    cls: `task`,
+    cls: 'task',
     content: title,
-})
+});
 
 const taskAllContainerT = (title) => ({
     block: 'li',
@@ -38,7 +36,5 @@ const taskPinnedContainerT = (title) => ({
     cls: 'task-container',
     content: [taskT(title), taskPinnedButton],
 });
-
-
 
 export { taskAllContainerT, taskPinnedContainerT };

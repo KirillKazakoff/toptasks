@@ -1,3 +1,13 @@
+/* eslint-disable object-curly-newline */
+/* eslint-disable prefer-const */
+
+function generateHtml(block, cls, content, attrs) {
+    if (block === 'input') {
+        return `<${block} ${attrs} ${cls}>`;
+    }
+    return `<${block} ${attrs} ${cls}>${content}</${block}>`;
+}
+
 export default function engine(node) {
     if ((node === false) || (node === undefined) || (node === null)) {
         return '';
@@ -13,7 +23,7 @@ export default function engine(node) {
         node.forEach((b) => {
             const htmlElement = engine(b);
             fragment += htmlElement;
-        })
+        });
 
         return fragment;
     }
@@ -36,11 +46,4 @@ export default function engine(node) {
     const htmlElement = generateHtml(block, htmlCls, htmlContent, htmlAttrs);
 
     return htmlElement;
-}
-
-function generateHtml(block, cls, content, attrs) {
-    if (block === 'input') {
-        return `<${block} ${attrs} ${cls}>`;
-    }
-    return `<${block} ${attrs} ${cls}>${content}</${block}>`;
 }

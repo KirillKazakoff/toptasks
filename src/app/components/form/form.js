@@ -24,12 +24,10 @@ export default class Form {
                 const task = new Task(button.closest('.task-container'));
                 const parentList = button.closest('ul');
 
-
                 if (parentList.className.includes('pinned')) {
                     this.allList.addTask(task.content);
                     this.pinnedList.deleteTask(task);
-                }
-                else {
+                } else {
                     this.pinnedList.addTask(task.content);
                     this.allList.deleteTask(task);
                 }
@@ -37,7 +35,7 @@ export default class Form {
                 this.onInput();
                 task.remove();
             }
-        })
+        });
 
         this.container.addEventListener('submit', (e) => this.onSubmit(e));
         this.input.addEventListener('input', () => this.onInput());
@@ -57,7 +55,7 @@ export default class Form {
             if (filtered.some((fTask) => fTask.lowContent === task.lowContent)) {
                 task.showTask();
             }
-        })
+        });
         this.messageBlock.checkNoFound(filtered);
     }
 
@@ -66,7 +64,6 @@ export default class Form {
         const { value } = this.input;
 
         if (!value) {
-            console.log('bruhhh wtf');
             this.messageBlock.showInputError();
             return;
         }
@@ -74,5 +71,4 @@ export default class Form {
         this.allList.addTask(value);
         this.input.value = '';
     }
-
 }

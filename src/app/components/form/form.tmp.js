@@ -21,7 +21,7 @@ const menuPinnedT = (list) => ({
         cls: 'menu-span',
         content: 'Pinned Tasks',
     }, listPinnedT(list)],
-})
+});
 
 const menuAllT = (list) => ({
     block: 'div',
@@ -31,13 +31,12 @@ const menuAllT = (list) => ({
         cls: 'menu-span',
         content: 'All Tasks',
     }, listAllT(list)],
-})
+});
 
 const formT = (pinned, all) => ({
     block: 'div',
     cls: 'form-tasks',
     content: [inputT(), menuPinnedT(pinned), menuAllT(all)],
-})
+});
 
 export { formT, listAllT, listPinnedT };
-
